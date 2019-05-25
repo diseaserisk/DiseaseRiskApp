@@ -1,0 +1,589 @@
+/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    background-color: #96C5EA;
+    font-size: .85em;
+    font-family: "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+a img
+{
+    text-decoration: none;
+    border: 0 none;
+}
+
+.disabled
+{
+    color: grey;
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default
+}
+
+a:link
+{
+    color: #034af3;
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color: #505abc;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #12eb87;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.5em;
+}
+
+header, footer, nav, section
+{
+    display: block;
+}
+
+/* HEADINGS
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2
+{
+    padding: 0 0 10px 0;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+    -webkit-margin-before: 0.6em;
+    -webkit-margin-after: 0.6em;
+}
+
+h5
+{
+    font-size: 1em;
+}
+
+h6
+{
+    font-size: 0.8em;
+}
+
+.GbsLink
+{
+    font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+    font-size: 0.9em;
+}
+/* PRIMARY LAYOUT ELEMENTS
+----------------------------------------------------------*/
+#FixedTopContainer
+{
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 850px;
+}
+.fixed-elem { position: absolute; }
+.fixed-always { position: fixed; }
+#MainNav
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 901; /* 1 more than #ViewCommands so the menus are above #ViewCommands */
+	width: 100%;
+	background: #4592CB;
+	height: 30px;
+}
+
+ul#nav { width: 840px; }
+ul#nav li.TopLevel
+{
+    white-space: nowrap;
+}
+
+#ViewCommands
+{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	z-index: 900;
+	width: 100%;
+	background: #585858;
+	height: 2.2em;
+	color: #fff;
+	-webkit-box-shadow: 0 0 20px #000;
+	-moz-box-shadow: 0 0 20px #000;
+	box-shadow: 0 0 20px #000;
+	border-bottom-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-bottom-left-radius: 8px;
+    text-align: right;
+}
+#ViewCommands ul
+{
+	margin: 0 6px 0 0;
+	padding:0;
+}
+#ViewCommands li
+{
+	display: inline;
+	list-style-type: none;
+	line-height: 2.2em;
+}
+#ViewCommands li a
+{
+	color: #fff;
+	font-size: .8em;
+	margin: 0 6px 0 0;
+	text-decoration: none;
+}
+#ViewCommands li a:hover {
+	text-decoration: underline;
+}
+#ViewCommands #Breadcrumb
+{
+	position: relative;
+	float: right;
+	right: 13px;
+	top: 6px;
+	font-size: .9em;
+}
+#Version
+{
+	position: relative;
+	float: right;
+	right: 5px;
+	top: 7px;
+	color: #fff;
+	font-size: .8em;
+	width: 75px;
+	text-align: right;
+	overflow: hidden;
+}
+#Header
+{
+	margin-top: 68px;
+}
+#Header h1.Title
+{
+	font-weight: lighter;
+	margin: 0; padding: 0;
+    color: #fff;
+    font-size: 2em;
+    margin: 0 0 20px 20px;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 2px #111;
+}
+#MainContent
+{
+	padding: 20px;
+    margin: 0 40px 0 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    overflow: auto;
+}
+#MainContent .MainContentTitle
+{
+	border-bottom: 1px solid #585858;
+	margin: 0 0 15px 0;
+}
+#MainContent h2.ViewTitle,
+#MainContent h2.ViewSectionTitle
+{
+	font-weight: lighter;
+	margin: 0 0 3px 0; padding: 0;
+    color: #585858;
+    font-size: 1.5em;
+
+    letter-spacing: -1px;
+}
+#MainContent h2.ViewSectionTitle
+{
+    margin: 0 0 5px 0px;
+}
+#MainContent h2.Error
+{
+	background:url(../Content/images/error.png) no-repeat top left;
+	padding: 0 0 0 40px;
+	line-height: 32px;
+}
+#Footer
+{
+    background-color: #fff;
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0 0 30px 0;
+    font-size: .9em;
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+}
+
+.SelectionsContainerHeader{
+background: #B0B0B0;
+padding: 3px 3px 3px 5px;
+border-top-right-radius: 8px;
+-webkit-border-top-right-radius: 8px;
+-moz-border-top-right-radius: 8px;
+border-top-left-radius: 8px;
+-webkit-top-bottom-left-radius: 8px;
+-moz-border-top-left-radius: 8px;
+margin: 0;
+}
+
+.SelectionsContainerHeader h4{
+font-weight: lighter;
+margin: 0;
+padding: 0;
+color: white;
+font-size: 1.3em;
+letter-spacing: -1px;
+}
+
+.SelectionsContainer
+{
+    margin: 0;
+    border: 1px solid #B0B0B0;
+    background: #F8F8F8;
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+    clear: both;
+}
+
+.SelectionSection
+{
+    float: left;
+    margin: 10px;
+}
+
+.SelectionSectionBottom
+{
+    clear:both;
+    margin: 10px;
+}
+
+.StepLabel
+{
+	float: right;
+	color: #78C588;
+	font-weight: lighter;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+}
+
+/* FORM LAYOUT ELEMENTS
+----------------------------------------------------------*/
+fieldset
+{
+    border: 1px solid green;
+    padding: 1.5em;
+    margin: 0 0 1.5em 0;
+    position:relative;
+    left:50px
+}
+
+legend
+{
+    padding: 0.2em 0.5em;
+    border:1px solid green;
+    color:green;
+    text-align:left;
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+
+textarea
+{
+    min-height: 75px;
+    min-width:300px;
+}
+
+input[type="text"], input[type="password"]
+{
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1px;
+    font-size: 1em;
+    color: #444;
+    width: 200px;
+}
+
+select
+{
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.0em;
+    color: #444;
+    width: 200px;
+}
+
+input[type="submit"]
+{
+    font-size: 1.1em;
+    padding: 3px;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table
+{
+    border: solid 1px #e8eef4;
+    border-collapse: collapse;
+}
+
+table td
+{
+    padding: 5px;
+    border: solid 1px #e8eef4;
+}
+
+table th
+{
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px gray;
+}
+
+/* MISC
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color: Red;
+}
+
+nav, #menucontainer
+{
+    margin-top: 40px;
+}
+
+div#title
+{
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+#logindisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    color: White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.note
+{
+    margin-bottom: 10px;
+    line-height: 0.5em;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid, .hidden
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, .editor-label
+{
+    margin: 1em 0 0 0;
+    float: right;
+    clear: right;
+}
+
+.floatRight
+{
+    float:right;
+}
+
+.display-field, .editor-field
+{
+    margin: 0.5em 0 0 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+
+
+/*
+
+Common styles
+
+*/
+.even-row { background: rgb(223, 239, 252); }
+.odd-row { background: #fff; }
+.total-row { background: #FFD2D2; }
+.header-row { background: #E2E2E2; }
+.info { font-style: italic; }
+.left-side-container { float: left}
+.right-side-container { float: right; }
+ul.list { list-style: none; margin: 0; padding: 0; }
+ul.list li { clear:both; list-style:none; margin: 0 0 5px 0; overflow: auto; }
+li.legend {margin-left: 50px !important}
+
+.field-label,
+.field-input,
+.field-readonly { font-size: 1em; float: left; }
+
+.bold
+{
+    font-weight: bold;
+}
+
+.field-label,
+.field-label-left,
+.field-label-col-header
+ { width: 150px; margin: 0 10px 0 0; text-align: right; font-weight: bold; }
+
+.field-label-col-header { text-align: left; }
+
+.filter { overflow: auto; }
+.list-number { text-align: center; }
+.list-wide { width: 200px; }
+
+.ui-jqgrid { z-index: 200; }
+#MainNav {position: absolute; z-index: 99999; overflow: visible}
+
+ul.error-list { list-style: none; margin: 0 0 5px 0; padding: 0; }
+ul.error-list li { list-style: none; margin: 0; padding: 0; color: Red; font-size: 1em; letter-spacing: -.4px; }
+
+span.validationMessage { margin: 0; padding: 0; color: Red; font-size: 1em; letter-spacing: -.4px; display:block; }
+
+.header-data-list
+{
+    float: left;
+}
+.header-data-right-side
+{
+    float: right;
+}
+
+/*date picker style */
+span.date-picker-label {
+width: 80px;
+float: left;
+text-align: right;
+margin-right: 5px;
+}
+
+input.date-picker {
+width: 90px;
+font-size: 1em;
+}
+
+
+.noneditableText
+{
+    color : rgb(176, 182, 189);
+    background-color : rgb(244, 247, 250);
+}
+
+.noneditableText.edit-cell.ui-state-highlight
+{
+   background: none;
+   color: none;
+}

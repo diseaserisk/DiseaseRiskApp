@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+<html>
+  <head>
+<header>
+<title>DiseaseRisk</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size: 16px;} 
+img {margin-bottom: -8px;}
+.mySlides {display: none;}
+</style>
+</header>
+
+
+    <script type="text/javascript">
+        jQuery(function () {
+            {% block script %}{% endblock script %}
+        });
+    </script>
+
+<style>
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th    {
+    background-color: gray;
+    color: white;
+}
+</style>
+
+  </head>
+
+  
+<body class="w3-content w3-black" style="max-width:1500px;">
+
+    <div id="FixedTopContainer" class="fixed-always">
+        <div id="MainNav">
+        </div><!-- MainNav -->
+        <div id="ViewCommands">
+        </div><!-- ViewCommands -->
+    </div><!-- FixdTopContainer -->
+
+    <div id="Header">
+        <h1 class="Title">Are you curious about your genetic code?</h1>
+    </div><!-- Header -->
+
+	<div id="MainContent">
+        <div id="message" title="Genetic variants description"></div>
+        {% block main %}{% endblock main %}
+
+	</div>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/submit.js') }}"></script>
+  </body>
+</html>
+
